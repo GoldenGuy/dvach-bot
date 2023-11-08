@@ -31,6 +31,7 @@ namespace discord_bot
             ConfigParser iniparser = new ConfigParser(Path.Combine(program_path, "settings.ini"));
             bot_token = iniparser.GetValue("Settings", "token");
             seed = iniparser.GetValue("Settings", "seed");
+            dvach_channel_id = ulong.Parse(iniparser.GetValue("Settings", "channel_id"));
 
             discord = new DiscordClient(new DiscordConfiguration()
             {
