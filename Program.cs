@@ -11,7 +11,7 @@ namespace discord_bot
     {
         static string bot_token = "";
         static string seed = "";
-        static ulong dvach_channel_id = 1171872312153362602;
+        static ulong dvach_channel_id = 0;
 
         static string[] avatars;
         static string[] emojis;
