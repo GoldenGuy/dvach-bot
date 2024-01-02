@@ -85,13 +85,13 @@ namespace discord_bot
 
             else if (args.Message.Channel.Id == dvach_channel_id)
             {
-                await DvachCommands(args);
+                //await DvachCommands(args);
                 return;
             }
         }
 
         // комманды админа на дваче
-        private static async Task DvachCommands(MessageCreateEventArgs args)
+        /*private static async Task DvachCommands(MessageCreateEventArgs args)
         {
             if (!args.Message.Content.StartsWith('/'))
                 return;
@@ -111,7 +111,7 @@ namespace discord_bot
 
             await args.Message.DeleteAsync("deleted a command");
             return;
-        }
+        }*/
 
         // личка бота
         private static async Task DmMessage(MessageCreateEventArgs args)
