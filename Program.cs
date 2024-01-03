@@ -154,13 +154,13 @@ namespace discord_bot
                     if (media == "video" || media == "image")
                     {
                         string url = attachment.Url.Substring(0, attachment.Url.IndexOf('?'));
-                        text_message += $"[||{media}-{enumerator}||]({url}) ";
+                        text_message += $"[||{media}_{enumerator}||]({url}) ";
                         enumerator++;
                     }
                 }
             }
 
-            var myButton = new DiscordButtonComponent(ButtonStyle.Secondary, "reply_button", "Ответить.", false, new DiscordComponentEmoji("⤴"));
+            var myButton = new DiscordButtonComponent(ButtonStyle.Secondary, "reply_button", "", false, new DiscordComponentEmoji("⤴"));
 
             if (reply_id != null)
             {
