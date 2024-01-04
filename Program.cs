@@ -146,16 +146,13 @@ namespace discord_bot
             if (attachments.Count > 0)
             {
                 text_message += '\n';
-                int enumerator = 1;
                 foreach (var attachment in attachments)
                 {
-                    //Console.WriteLine(attachment.MediaType);
                     string media = attachment.MediaType.Substring(0, attachment.MediaType.IndexOf('/'));
                     if (media == "video" || media == "image")
                     {
                         string url = attachment.Url.Substring(0, attachment.Url.IndexOf('?'));
-                        text_message += $"[||{media}_{enumerator}||]({url}) ";
-                        enumerator++;
+                        text_message += $"[ؚ]({url}) ";
                     }
                 }
             }
